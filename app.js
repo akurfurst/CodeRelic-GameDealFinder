@@ -1,12 +1,12 @@
 import express from 'express';
 
 const app = express();
-const PORT = 3010;
-
+const PORT = 3003;
+app.set('view engine', 'ejs');
 app.use(express.static('public'));
 
 app.get('/', (req, res) => {
-    res.sendFile(`${import.meta.dirname}/views/home.html`);
+    res.render('home');
 });
 
 app.listen(PORT, () =>{
