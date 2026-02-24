@@ -8,6 +8,62 @@
     <title>Game Deal Finder</title>
 </head>
 <body>
-    <h1>Game Deal Finder</h1>
+    <header>
+        <h1>Game Deal Finder</h1>
+        <label id="search" for="search">Search
+            <input type="search" name="search">
+        </label>
+    </header>
+    <nav>
+        <div id="account" class="nav">
+            <a href="#">Account</a>
+        </div>
+        <div id="settings" class="nav">
+            <a href="#">Settings</a>
+        </div>
+        <div id="about-us" class="nav">
+            <a href="#">About Us</a>
+        </div>
+        <div id="add-deal" class="nav">
+            <a href="#">Add Deal</a>
+        </div>
+    </nav>
+    <div id="filter">
+        <fieldset id="platform" class="filters">
+            <legend>Filter</legend>
+            <h3>Platform</h3>
+            <lable for="steam">
+                <input type="checkbox" id="steam" name="platform[]" value="steam">Steam
+            </lable>
+            <lable for="xbox">
+                <input type="checkbox" id="xbox" name="platform[]" value="xbox">Xbox
+            </lable>
+            <lable for="playstation">
+                <input type="checkbox" id="playstation" name="platform[]" value="playstation">Playstation
+            </lable>
+            <lable for="epic">
+                <input type="checkbox" id="epic" name="platform[]" value="epic">Epic
+            </lable>
+            <lable for="nintendo">
+                <input type="checkbox" id="nintendo" name="platform[]" value="nintendo">Nintendo
+            </lable>
+            <h3>Price</h3>
+            <lable for="under20">
+                <input type="checkbox" id="under20" name="price[]" value="under20">Under $20
+            </lable>
+            <lable for="under15">
+                <input type="checkbox" id="under15" name="price[]" value="under15">Under $15
+            </lable>
+            <lable for="under10">
+                <input type="checkbox" id="under10" name="price[]" value="under10">Under $10
+            </lable>
+            <lable for="under5">
+                <input type="checkbox" id="under5" name="price[]" value="under5">Under $5
+            </lable>
+        </fieldset>
+    </div>
+    <div id="main">
+        <h1>Test</h1>
+    </div>
 </body>
 </html>

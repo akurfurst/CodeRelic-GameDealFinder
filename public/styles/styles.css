@@ -1,0 +1,48 @@
+body {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 20% 10% auto;
+    grid-template-areas: "title title title"
+        "nav nav nav"
+        "filter main main";
+}
+
+header {
+    background-color: aqua;
+    grid-area: title;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+nav {
+    background-color: lightgreen;
+    grid-area: nav;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.nav {
+    height: 100%;
+    width: 100%;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#filter{
+    background-color: lightcoral;
+    grid-area: filter;
+}
+
+.filters {
+    display: flex;
+    flex-direction: column;
+}
+
+#main {
+    background-color: lightseagreen;
+    grid-area: main;
+}
