@@ -5,8 +5,25 @@ const PORT = 3010;
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
 
+const deals = [
+    {
+        title: "test1",
+        price: 20,
+        discount: 15,
+        platform: "Steam",
+        duration: 7
+    },
+    {
+        title: "test2",
+        price: 15,
+        discount: 50,
+        platform: "xbox",
+        duration: 14
+    }
+];
+
 app.get('/', (req, res) => {
-    res.render('home');
+    res.render('home', {deals});
 });
 
 app.listen(PORT, () =>{

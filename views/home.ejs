@@ -63,7 +63,15 @@
         </fieldset>
     </div>
     <div id="main">
-        <h1>Test</h1>
+        <% deals.forEach(deal=> { %>
+            <div class="deal-card">
+                <h3><%= deal.title %></h3>
+                <p>price: $<%= deal.price %></p>
+                <p>Discount: -<%= deal.discount %>%</p>
+                <p>Platform: <%= deal.platform %></p>
+                <p>Duration: <%= deals.duration %> days</p>
+            </div>
+        <% }) %>
     </div>
 </body>
 </html>
