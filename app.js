@@ -19,6 +19,27 @@ const deals = [
         discount: 50,
         platform: "xbox",
         duration: 14
+    },
+    {
+        title: "test3",
+        price: 15,
+        discount: 50,
+        platform: "xbox",
+        duration: 14
+    },
+    {
+        title: "test4",
+        price: 15,
+        discount: 50,
+        platform: "xbox",
+        duration: 14
+    },
+    {
+        title: "test5",
+        price: 15,
+        discount: 50,
+        platform: "xbox",
+        duration: 14
     }
 ];
 
