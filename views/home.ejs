@@ -10,8 +10,8 @@
 <body>
     <header>
         <h1>Game Deal Finder</h1>
-        <label id="search" for="search">Search
-            <input type="search" name="search">
+        <label for="search">Search
+            <input type="search" id="search" name="search">
         </label>
     </header>
     <nav>
@@ -32,40 +32,40 @@
         <fieldset id="platform" class="filters">
             <legend>Filter</legend>
             <h3>Platform</h3>
-            <lable for="steam">
+            <label for="steam">
                 <input type="checkbox" id="steam" name="platform[]" value="steam">Steam
-            </lable>
-            <lable for="xbox">
+            </label>
+            <label for="xbox">
                 <input type="checkbox" id="xbox" name="platform[]" value="xbox">Xbox
-            </lable>
-            <lable for="playstation">
+            </label>
+            <label for="playstation">
                 <input type="checkbox" id="playstation" name="platform[]" value="playstation">Playstation
-            </lable>
-            <lable for="epic">
+            </label>
+            <label for="epic">
                 <input type="checkbox" id="epic" name="platform[]" value="epic">Epic
-            </lable>
-            <lable for="nintendo">
+            </label>
+            <label for="nintendo">
                 <input type="checkbox" id="nintendo" name="platform[]" value="nintendo">Nintendo
-            </lable>
+            </label>
             <h3>Price</h3>
-            <lable for="under20">
+            <label for="under20">
                 <input type="checkbox" id="under20" name="price[]" value="under20">Under $20
-            </lable>
-            <lable for="under15">
+            </label>
+            <label for="under15">
                 <input type="checkbox" id="under15" name="price[]" value="under15">Under $15
-            </lable>
-            <lable for="under10">
+            </label>
+            <label for="under10">
                 <input type="checkbox" id="under10" name="price[]" value="under10">Under $10
-            </lable>
-            <lable for="under5">
+            </label>
+            <label for="under5">
                 <input type="checkbox" id="under5" name="price[]" value="under5">Under $5
-            </lable>
+            </label>
         </fieldset>
     </div>
     <div id="main">
         <% deals.forEach(deal=> { %>
             <div class="deal-card">
-                <h3><%= deal.title %></h3>
+                <h2><%= deal.title %></h2>
                 <p>price: $<%= deal.price %></p>
                 <p>Discount: -<%= deal.discount %>%</p>
                 <p>Platform: <%= deal.platform %></p>
