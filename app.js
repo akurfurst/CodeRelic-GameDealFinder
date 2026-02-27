@@ -5,7 +5,7 @@ const PORT = 3010;
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }));
-
+//Test data to display on main page
 const deals = [
     {
         title: "test1",
@@ -44,20 +44,22 @@ const deals = [
     }
 ];
 
+//routing for home page, sends deals array to be displayed in deal cards
 app.get('/', (req, res) => {
     res.render('home', {deals});
 });
 
+//routing for about-us
 app.get('/about-us', (req, res) => {
-    
-    deals.push(deal);
     res.render('aboutus');
 });
 
+//routing to deal from
 app.get('/submit-deal', (req, res) => {
     res.render('submit-deal');
 });
 
+//routing to form confirmation page and collect user data from from
 app.post('/deal-confirm', (req, res) =>{
     //grab user information and add to array
     const deal = {
@@ -73,6 +75,7 @@ app.post('/deal-confirm', (req, res) =>{
     res.send(deals);
 });
 
+//start server and listen on designated port
 app.listen(PORT, () =>{
     console.log(`Server started at http://localhost:${PORT}`)
 })
