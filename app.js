@@ -47,6 +47,10 @@ app.get('/', (req, res) => {
     res.render('home', {deals});
 });
 
+app.get('/about-us', (req, res) => {
+    res.render('aboutus');
+});
+
 app.listen(PORT, () =>{
     console.log(`Server started at http://localhost:${PORT}`)
 })
