@@ -8,3 +8,7 @@ body {
     );
     background-attachment: fixed;
 }
+.err {
+  color: red;
+  display: none;
+}
