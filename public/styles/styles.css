@@ -1,14 +1,23 @@
+html, body {
+    height: 100%;
+}
+
 body {
+    margin: 0;
+    color: #EEEEEE;
+    font-family: sans-serif;
+    background-color: #8E1616;
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
-    grid-template-rows: 20% 10% auto;
+    grid-template-rows: 10% 50px 1fr;
     grid-template-areas: "title title title"
         "nav nav nav"
         "filter main main";
+    min-height: 100vh;
 }
 
 header {
-    background-color: aqua;
+    background-color: #8E1616;
     grid-area: title;
     display: flex;
     justify-content: space-between;
@@ -16,7 +25,7 @@ header {
 }
 
 nav {
-    background-color: lightgreen;
+    background-color: #D84040;
     grid-area: nav;
     display: flex;
     justify-content: space-evenly;
@@ -33,7 +42,7 @@ nav {
 }
 
 #filter{
-    background-color: lightcoral;
+    background-color: #8E1616;
     grid-area: filter;
 }
 
@@ -43,6 +52,24 @@ nav {
 }
 
 #main {
-    background-color: lightseagreen;
+    background-color: #1D1616;
     grid-area: main;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 100%;
+}
+
+.deal-card{
+    background-color: #8E1616;
+    width: 250px;
+    height: 250px;
+    margin: 1%;
+    padding: .25rem;
+    text-align: center;
+}
+
+a{
+    color: #EEEEEE;
+    text-decoration: none;
 }
