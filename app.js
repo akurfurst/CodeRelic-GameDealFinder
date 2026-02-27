@@ -51,6 +51,10 @@ app.get('/about-us', (req, res) => {
     res.render('aboutus');
 });
 
+app.get('/submit-deal', (req, res) => {
+    res.render('submitdeal');
+});
+
 app.listen(PORT, () =>{
     console.log(`Server started at http://localhost:${PORT}`)
 })
