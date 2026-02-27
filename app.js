@@ -4,42 +4,43 @@ const app = express();
 const PORT = 3010;
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
+app.use(express.urlencoded({ extended: true }));
 
 const deals = [
     {
         title: "test1",
         price: 20,
-        discount: 15,
+        free: false,
         platform: "Steam",
-        duration: 7
+        date: 7
     },
     {
         title: "test2",
         price: 15,
-        discount: 50,
+        free: false,
         platform: "xbox",
-        duration: 14
+        date: 14
     },
     {
         title: "test3",
         price: 15,
-        discount: 50,
+        free: false,
         platform: "xbox",
-        duration: 14
+        date: 14
     },
     {
         title: "test4",
         price: 15,
-        discount: 50,
+        free: false,
         platform: "xbox",
-        duration: 14
+        date: 14
     },
     {
         title: "test5",
         price: 15,
-        discount: 50,
+        free: false,
         platform: "xbox",
-        duration: 14
+        date: 14
     }
 ];
 
@@ -48,11 +49,28 @@ app.get('/', (req, res) => {
 });
 
 app.get('/about-us', (req, res) => {
+    
+    deals.push(deal);
     res.render('aboutus');
 });
 
 app.get('/submit-deal', (req, res) => {
-    res.render('submitdeal');
+    res.render('submit-deal');
+});
+
+app.post('/deal-confirm', (req, res) =>{
+    //grab user information and add to array
+    const deal = {
+        title: req.body['game-title'],
+        price: req.body.price,
+        free: req.body.free,
+        url: req.body['deal-url'],
+        date: req.body['expiry-date'],
+        platform: req.body.platform,
+        timestamp: new Date()
+    };
+    deals.push(deal);
+    res.send(deals);
 });
 
 app.listen(PORT, () =>{
