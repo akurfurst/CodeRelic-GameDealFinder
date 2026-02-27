@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Deal</title>
+    <link rel="stylesheet" href="/styles/submit-deal.css">
+</head>
+<body>
+
+    <label for="search">Search</label>
+    <input type="text" id="search" name="search" placeholder="Enter a game title">
+
+    <form action="/deal-confirm" method="post">
+        <fieldset>
+            <h1>Add a Deal!</h1>
+
+            <label for="game-title">Game Title</label>
+            <input type="text" id="game-title" name="game-title" placeholder="Enter a game title">
+
+            <label for="price">Price</label>
+            <input type="number" id="price" name="price" placeholder="$0.00">
+            <label for="free">
+                <input type="checkbox" id="free" name="free">Free
+            </label>
+
+            <label for="deal-url">Deal URL</label>
+            <input type="url" id="deal-url" name="deal-url" placeholder="https://...">
+
+            <label for="promo-code">Promo Code</label>
+            <input type="text" id="promo-code" name="promo-code" placeholder="Enter promo code">
+
+            <label for="expiry-date">Expiry Date</label>
+            <input type="date" id="expiry-date" name="expiry-date">
+
+            <label>Platform:</label>
+            <label for="steam"><input type="checkbox" id="steam" name="platform[]" value="steam">Steam</label>
+            <label for="xbox"><input type="checkbox" id="xbox" name="platform[]" value="xbox">Xbox</label>
+            <label for="sony"><input type="checkbox" id="sony" name="platform[]" value="sony">Sony</label>
+            <label for="epic"><input type="checkbox" id="epic" name="platform[]" value="epic">Epic</label>
+            <label for="nintendo"><input type="checkbox" id="nintendo" name="platform[]" value="nintendo">Nintendo</label>
+
+            <button type="submit">Submit</button>
+        </fieldset>
+    </form>
+
+</body>
+</html>
