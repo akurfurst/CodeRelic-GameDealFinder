@@ -44,11 +44,17 @@ nav {
 #filter{
     background-color: #8E1616;
     grid-area: filter;
+    margin-right: 5px;
+    
+    
 }
 
 .filters {
     display: flex;
     flex-direction: column;
+    font-size: small;
+    text-align: left;
+    margin-left: 5px;
 }
 
 #main {
