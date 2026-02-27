@@ -7,9 +7,10 @@
     <link rel="stylesheet" href="/styles/submit-deal.css">
 </head>
 <body>
-
+    <div class = "search-bar">
     <label for="search">Search</label>
     <input type="text" id="search" name="search" placeholder="Enter a game title">
+    </div>
     <section class = "card">
         <main class = "page">
      <form action="/deal-confirm" id="deal-form" method="post">
@@ -25,7 +26,7 @@
             <input type="text" id="game-title" name="game-title" placeholder="Enter a game title">
             <span class="err" id="err-game-title">Game title is required</span>
             </div>
-            
+
             <div class = "field">
             <label for="price">Price</label>
             <input type="number" id="price" name="price" placeholder="$0.00">
