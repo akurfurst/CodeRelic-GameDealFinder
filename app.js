@@ -70,7 +70,7 @@ app.post('/deal-confirm', (req, res) =>{
     const deal = {
         title: req.body['game-title'],
         price: req.body.price,
-        free: req.body.free,
+        free: req.body.free ? 'Yes' : 'No',
         url: req.body['deal-url'],
         date: req.body['expiry-date'],
         platform: req.body.platform,
