@@ -16,11 +16,17 @@ body {
     min-height: 100vh;
 }
 
+
 header {
     background-color: #8E1616;
     grid-area: title;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    border: #EEEEEE 1px solid;
+    border-radius: 5px;
+    
+    
 
 }
 
@@ -30,6 +36,7 @@ nav {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    border: #EEEEEE 2px solid;
 }
 
 .nav {
@@ -41,14 +48,21 @@ nav {
     align-items: center;
 }
 
+
 #filter{
     background-color: #8E1616;
     grid-area: filter;
+    margin-right: 5px;
+
+    
 }
 
 .filters {
     display: flex;
     flex-direction: column;
+    font-size: small;
+    text-align: left;
+    margin-left: 5px;
 }
 
 #main {
@@ -67,6 +81,9 @@ nav {
     margin: 1%;
     padding: .25rem;
     text-align: center;
+    border: 2px solid #EEEEEE;
+    border-radius: 5px;
+
 }
 
 a{

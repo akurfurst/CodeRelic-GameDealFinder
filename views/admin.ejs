@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="//code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="//cdn.datatables.net/2.3.7/js/dataTables.js"></script>
+    <script src="//cdn.datatables.net/responsive/3.0.2/js/dataTables.responsive.min.js"></script>
+    <link rel="stylesheet" href="//cdn.datatables.net/2.3.7/css/dataTables.dataTables.css">
+    <link rel="stylesheet" href="//cdn.datatables.net/responsive/3.0.2/css/responsive.dataTables.min.css">
+    <title>Admin</title>
+</head>
+<body>
+    <h1>Game Deals</h1>
+    <table id="deal-table" class="display">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Price</th>
+                <th>Free</th>
+                <th>URL</th>
+                <th>Experation Date</th>
+                <th>Platform</th>
+                <th>Timestamp</th>                           
+            </tr>
+        </thead>
+        <tbody>
+    <% deals.forEach(deal => { %>
+        <tr>
+            <td><%= deal.title %></td>
+            <td><%= deal.price %></td>
+            <td><%= deal.free %></td>
+            <td><%= deal.url %></td>
+            <td><%= deal.date %></td>
+            <td><%= deal.platform %></td>
+            <td><%= deal.timestamp %></td>
+        </tr>
+    <% }) %>
+        </tbody>    
+    </table>
+
+    <script defer>
+        let table = new DataTable('#deal-table');
+    </script>
+</body>
+</html>
