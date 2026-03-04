@@ -59,6 +59,11 @@ app.get('/submit-deal', (req, res) => {
     res.render('submit-deal');
 });
 
+//routing to admin page
+app.get('/admin', (req, res) => {
+    res.render('admin', {deals});
+});
+
 //routing to form confirmation page and collect user data from from
 app.post('/deal-confirm', (req, res) =>{
     //grab user information and add to array
