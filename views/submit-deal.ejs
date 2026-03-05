@@ -7,10 +7,7 @@
     <link rel="stylesheet" href="/styles/submit-deal.css">
 </head>
 <body>
-    <div class = "search-bar">
-    <label for="search">Search</label>
-    <input type="text" id="search" name="search" placeholder="Enter a game title">
-    </div>
+    <%- include('../views/navbar')%>
     <div class = "form">
         <main>
      <form id="deal-form" class ="deal-form" action="/deal-confirm" method="post">

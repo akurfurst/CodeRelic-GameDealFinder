@@ -9,7 +9,8 @@
     <title>Game Deal Finder</title>
 </head>
 <body>
-    <header>
+    <%- include('../views/navbar')%>
+    <!--<header>
         <h1>Game Deal Finder</h1>
         <label for="search">Search
             <input type="search" id="search" name="search">
@@ -28,7 +29,7 @@
         <div id="add-deal" class="nav">
             <a href="/submit-deal">Add Deal</a>
         </div>
-    </nav>
+    </nav>-->
     <div id="filter">
         <fieldset id="platform" class="filters">
             <legend>Filter</legend>
@@ -67,10 +68,10 @@
         <% deals.forEach(deal=> { %>
             <div class="deal-card">
                 <h3><%= deal.title %></h3>
-                <p>price: $<%= deal.price %></p>
-                <p>Discount: -<%= deal.discount %>%</p>
-                <p>Platform: <%= deal.platform %></p>
-                <p>Duration: <%= deals.duration %> days</p>
+                <p>price: </p><p>$<%= deal.price %></p>
+                <p>Discount: </p><p>-<%= deal.discount %>%</p>
+                <p>Platform: </p><p><%= deal.platform %></p>
+                <p>Duration: </p><p><%= deals.duration %> days</p>
             </div>
         <% }) %>
     </div>

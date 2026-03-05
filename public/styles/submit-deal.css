@@ -63,12 +63,12 @@ body {
 }
 
 header {
-    border: 1px solid #ffffff;
+    border: 1px solid #EEEEEE;
     text-align: center;
     background-color: #D84040;
 }
-.deal-form {
-    background-color: #ffffff;
+.card {
+    background-color: #8e1616;
     padding: 30px 16px;
     box-shadow: 0px 3px 3px #030303;
     border: #6200ff 1px solid;
@@ -101,28 +101,5 @@ fieldset {
    input {
     background-color: #8e1616;
    }
-
-}
-
-label img {
-    width: 32px;
-    height: 32px;
-    vertical-align: middle;
-}
-
-
-.deal-form {
-max-width: 900px;
-}
-
-label ul {
-    list-style: none;
-}
-button {
-    background-color: red;
-    color: white;
-    border-radius: 10px;
-    text-align: center;
-    align-items: center;
 
 }
