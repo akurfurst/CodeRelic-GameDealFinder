@@ -68,10 +68,10 @@
         <% deals.forEach(deal=> { %>
             <div class="deal-card">
                 <h3><%= deal.title %></h3>
-                <p>price: $<%= deal.price %></p>
-                <p>Discount: -<%= deal.discount %>%</p>
-                <p>Platform: <%= deal.platform %></p>
-                <p>Duration: <%= deals.duration %> days</p>
+                <p>price: </p><p>$<%= deal.price %></p>
+                <p>Discount: </p><p>-<%= deal.discount %>%</p>
+                <p>Platform: </p><p><%= deal.platform %></p>
+                <p>Duration: </p><p><%= deals.duration %> days</p>
             </div>
         <% }) %>
     </div>
