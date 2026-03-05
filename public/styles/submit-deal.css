@@ -27,36 +27,62 @@ body {
     padding: 28px;
 }
 
-.form-grid {
+/* .form-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 16px 18px;
   margin-top: 18px;
+} */
+
+.text-input {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+    border-radius: 5px;
 }
 
 .field {
     display: flex;
     flex-direction: column;
-    border: #EEEEEE 1px solid;
-    padding-bottom: 12px;;
+    border: none;
+    margin-top: 10px;
+    padding-bottom: 12px;
     border-radius: 5px;
-    background-color: #D84040;
+}
 
-    input {
-      background-color: #433f3f;
+    .field input, 
+    .field textarea {
+      background-color: #ffffff;
+      width: 100%;
     }
+
+ textarea {
+    color: #D84040;
+}
+
+.price-row {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    width: 100%;
+    flex: 1;
+}
+
+.price-row input[type="number"] {
+    flex: 1;
 }
 
 .field-expiry {
     display: flex;
     flex-direction: column;
-    border: #EEEEEE 1px solid;
-    padding-bottom: 12px;;
+    border: none;
+    margin-top: 10px;
+    padding-bottom: 12px;
     border-radius: 5px;
-    background-color: #D84040;
+
 
     input {
-      background-color: #433f3f;
+      background-color: #ffffff;
     }
 
     
@@ -67,11 +93,11 @@ header {
     text-align: center;
     background-color: #D84040;
 }
-.card {
-    background-color: #8e1616;
+.deal-form {
+    background-color: #ffffff;
     padding: 30px 16px;
     box-shadow: 0px 3px 3px #030303;
-    border: #6200ff 1px solid;
+    border: #000000 1px solid;
     border-radius: 5px;
     width: 800px;
     margin: 40px auto;}
@@ -102,4 +128,37 @@ fieldset {
     background-color: #8e1616;
    }
 
+
+}
+label img {
+    width: 32px;
+    height: 32px;
+    vertical-align: middle;
+}
+
+ul {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    align-content: center;
+    list-style: none;
+
+}
+
+button {
+    display: block;
+    width: 80%;
+    background-color: red;
+    padding: 14px;
+    margin: auto;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    align-items: center;
+    cursor: pointer;
+    margin-top: 20px;
+}
+.platform-container {
+    margin-top: 16px;
 }

@@ -8,11 +8,9 @@
 </head>
 <body>
     <%- include('../views/navbar')%>
-    <div class = "form">
         <main>
      <form id="deal-form" class ="deal-form" action="/deal-confirm" method="post">
                 <h1>Add a Deal!</h1> 
-            <div class = "form-grid">
             <div class = "field">
             <label for="game-title">Game Title</label>
             <input type="text" id="game-title" name="game-title" placeholder="Enter a game title">
@@ -21,16 +19,16 @@
 
             <div class = "field">
             <label for="price">Price</label>
+            <div class="price-row">
             <input type="number" id="price" name="price" placeholder="$0.00">
-            <span class="err" id="err-price">Price is required</span>
-            </div>
-
-            <div class = "field-checkbox">
-            <label for="free">
+             <label for="free">
                 <input type="checkbox" id="free" name="free">Free
             </label>
+            <span class="err" id="err-price">Price is required</span>
             </div>
-            
+        
+
+            </div>
             <div class = "field">
             <label for="deal-url">Deal URL</label>
             <input type="url" id="deal-url" name="deal-url" placeholder="https://...">
@@ -50,7 +48,7 @@
 
 
             <div class = "platform-container">
-            <label>Platform: <span class="err" id="err-platform">Please select at least one platform</span>
+            <label>Platform: 
                 <span class="err" id="err-platform">Please select at least one platform</span> </label>
          <ul>     
         <li>
