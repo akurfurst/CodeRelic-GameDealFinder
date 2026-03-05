@@ -1,6 +1,14 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+
 body {
     min-height: 100vh;
-    background-color: #1D1616;
+    background-color: #7a3232;
     
     /**background: linear-gradient(
         100deg,
@@ -55,18 +63,24 @@ body {
 }
 
 header {
-    border: 1px solid #EEEEEE;
+    border: 1px solid #ffffff;
     text-align: center;
     background-color: #D84040;
 }
-.card {
-    background-color: #8e1616;
+.deal-form {
+    background-color: #ffffff;
     padding: 30px 16px;
-    box-shadow: 0px 10px 3px #1D1616;
-    border: #EEEEEE 1px solid;
+    box-shadow: 0px 3px 3px #030303;
+    border: #6200ff 1px solid;
     border-radius: 5px;
+    width: 800px;
+    margin: 40px auto;}
+
+.deal-form h1 {
+    text-align: center;
+    }
     
-}
+
 .err {
   color: red;
   display: none;
@@ -87,5 +101,28 @@ fieldset {
    input {
     background-color: #8e1616;
    }
+
+}
+
+label img {
+    width: 32px;
+    height: 32px;
+    vertical-align: middle;
+}
+
+
+.deal-form {
+max-width: 900px;
+}
+
+label ul {
+    list-style: none;
+}
+button {
+    background-color: red;
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+    align-items: center;
 
 }

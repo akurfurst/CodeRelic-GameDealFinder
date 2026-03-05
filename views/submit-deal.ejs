@@ -11,16 +11,11 @@
     <label for="search">Search</label>
     <input type="text" id="search" name="search" placeholder="Enter a game title">
     </div>
-    <section class = "card">
-        <main class = "page">
-     <form action="/deal-confirm" id="deal-form" method="post">
-        <fieldset>
-            <header>
+    <div class = "form">
+        <main>
+     <form id="deal-form" class ="deal-form" action="/deal-confirm" method="post">
                 <h1>Add a Deal!</h1> 
-            </header>
-           
             <div class = "form-grid">
-
             <div class = "field">
             <label for="game-title">Game Title</label>
             <input type="text" id="game-title" name="game-title" placeholder="Enter a game title">
@@ -53,22 +48,39 @@
             <label for="expiry-date">Expiry Date</label>
             <input type="date" id="expiry-date" name="expiry-date">
             <span class="err" id="err-expiry-date">Expiry date is required</span>
+                </div>
             </div>
-            <div class = field-platform>
-            <label>Platform:</label>
-            <label for="steam"><input type="checkbox" id="steam" name="platform[]" value="steam">Steam</label>
-            <label for="xbox"><input type="checkbox" id="xbox" name="platform[]" value="xbox">Xbox</label>
-            <label for="sony"><input type="checkbox" id="sony" name="platform[]" value="sony">Sony</label>
-            <label for="epic"><input type="checkbox" id="epic" name="platform[]" value="epic">Epic</label>
-            <label for="nintendo"><input type="checkbox" id="nintendo" name="platform[]" value="nintendo">Nintendo</label>
-            <span class="err" id="err-platform">Please select at least one platform</span>
 
+
+            <div class = "platform-container">
+            <label>Platform: <span class="err" id="err-platform">Please select at least one platform</span>
+                <span class="err" id="err-platform">Please select at least one platform</span> </label>
+         <ul>     
+        <li>
+            <label for="steam"><input type="checkbox" id="steam" name="platform[]" value="steam">
+                <img src="/images/Steam.png" alt="Steam">Steam</label>
+        </li>
+        <li>
+            <label for="xbox"><input type="checkbox" id="xbox" name="platform[]" value="xbox">
+                <img src="/images/xbox.png" alt="Xbox">Xbox</label>
+        </li>
+        <li>
+            <label for="sony"><input type="checkbox" id="sony" name="platform[]" value="sony">
+                <img src="/images/sony.jpg" alt="Sony">Sony</label>
+        </li>
+        <li>
+            <label for="epic"><input type="checkbox" id="epic" name="platform[]" value="epic">
+                <img src="/images/epicGames.png" alt="Epic">Epic</label>
+        </li>
+        <li>
+            <label for="nintendo"><input type="checkbox" id="nintendo" name="platform[]" value="nintendo">
+                <img src="/images/nintendo.png" alt="Nintendo">Nintendo</label>
+        </li>
+    </ul>    
+            </div>
             <button type="submit">Submit</button>
-
-            </div>
-        </fieldset>
      </form>
-    </section>
+    </div>
     </main>
 <script src="/js/deals.js" defer></script>
 </body>
