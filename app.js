@@ -77,7 +77,7 @@ app.post('/deal-confirm', (req, res) =>{
         timestamp: new Date()
     };
     deals.push(deal);
-    res.send(deals);
+    res.render('confirmation', {deal});
 });
 
 //start server and listen on designated port

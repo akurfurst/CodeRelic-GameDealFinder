@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/submit-deal.css">
+    <title>Deal Submmitted</title>
+</head>
+<body>
+    <%- include('../views/navbar')%>
+    <div id="confirmation">
+        <h1>Deal Submitted!</h1>
+        <p><%= deal.title %></p>
+        <p><%= deal.price %></p>
+        <p><%= deal.free %></p>
+        <p><%= deal.url %></p>
+        <p><%= deal.date %></p>
+        <p><%= deal.platform %></p>
+        <p><%= deal.timestamp %></p>
+    </div>
+</body>
+</html>
