@@ -118,6 +118,11 @@ nav {
     color: #EEEEEE;
 }
 
+.nav a:hover{
+    transition: .5s;
+    background-color: #8E1616;
+}
+
 header {
     border: 1px solid #EEEEEE;
     text-align: center;

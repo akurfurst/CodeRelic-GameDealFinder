@@ -41,6 +41,12 @@ nav {
     justify-content: center;
     align-items: center;
 }
+
+.nav a:hover{
+    transition: .5s;
+    background-color: #8E1616;
+}
+
 .search-bar {
     display: flex;
     justify-content: right;
