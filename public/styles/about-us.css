@@ -40,6 +40,8 @@ nav {
     height: 100%;
     justify-content: center;
     align-items: center;
+    text-decoration: none;
+    color: #EEEEEE;
 }
 
 .nav a:hover{
@@ -60,7 +62,16 @@ nav {
 
 }
 
-a{
+#about-us-content a{
     color: #EEEEEE;
     text-decoration: none;
+    padding: .5rem;
+    border-radius: 1rem;
+    border: none;
+}
+
+#about-us-content a:hover{
+    transition: .25s;
+    border: 1px solid #EEEEEE;
+    background-color: #D84040;
 }
