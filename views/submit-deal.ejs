@@ -8,75 +8,73 @@
 </head>
 <body>
     <%- include('../views/navbar')%>
-        <main>
-     <form id="deal-form" class ="deal-form" action="/deal-confirm" method="post">
-                <h1>Add a Deal!</h1> 
-            <div class = "field">
+    <main>
+    <form id="deal-form" class ="deal-form" action="/deal-confirm" method="post">
+        <h1>Add a Deal!</h1> 
+        <div class = "field">
             <label for="game-title">Game Title</label>
             <input type="text" id="game-title" name="game-title" placeholder="Enter a game title">
             <span class="err" id="err-game-title">Game title is required</span>
-            </div>
+        </div>
 
-            <div class = "field">
+        <div class = "field">
             <label for="price">Price</label>
-            <div class="price-row">
+        </div>
+
+        <div class="price-row">
             <input type="number" id="price" name="price" placeholder="$0.00">
-             <label for="free">
+            <label for="free">
                 <input type="checkbox" id="free" name="free">Free
             </label>
             <span class="err" id="err-price">Price is required</span>
-            </div>
-        
+        </div>
 
-            </div>
-            <div class = "field">
+        <div class = "field">
             <label for="deal-url">Deal URL</label>
-            <input type="url" id="deal-url" name="deal-url" placeholder="https://...">
+                <input type="url" id="deal-url" name="deal-url" placeholder="https://...">
             <span class="err" id="err-url">Deal URL is required</span>
-            </div>
+        </div>
 
-            <div class = "field">
+        <div class = "field">
             <label for="promo-code">Promo Code</label>
             <input type="text" id="promo-code" name="promo-code" placeholder="Enter promo code">
-            </div>
-            <div class = "field-expiry">
+        </div>
+
+        <div class = "field-expiry">
             <label for="expiry-date">Expiry Date</label>
             <input type="date" id="expiry-date" name="expiry-date">
             <span class="err" id="err-expiry-date">Expiry date is required</span>
-                </div>
-            </div>
+        </div>
 
-
-            <div class = "platform-container">
+        <div class = "platform-container">
             <label>Platform: 
-                <span class="err" id="err-platform">Please select at least one platform</span> </label>
-         <ul>     
-        <li>
-            <label for="steam"><input type="checkbox" id="steam" name="platform[]" value="steam">
-                <img src="/images/Steam.png" alt="Steam">Steam</label>
-        </li>
-        <li>
-            <label for="xbox"><input type="checkbox" id="xbox" name="platform[]" value="xbox">
-                <img src="/images/xbox.png" alt="Xbox">Xbox</label>
-        </li>
-        <li>
-            <label for="sony"><input type="checkbox" id="sony" name="platform[]" value="sony">
-                <img src="/images/sony.jpg" alt="Sony">Sony</label>
-        </li>
-        <li>
-            <label for="epic"><input type="checkbox" id="epic" name="platform[]" value="epic">
-                <img src="/images/epicGames.png" alt="Epic">Epic</label>
-        </li>
-        <li>
-            <label for="nintendo"><input type="checkbox" id="nintendo" name="platform[]" value="nintendo">
-                <img src="/images/nintendo.png" alt="Nintendo">Nintendo</label>
-        </li>
-    </ul>    
-            </div>
-            <button type="submit">Submit</button>
-     </form>
-    </div>
+            <span class="err" id="err-platform">Please select at least one platform</span> </label>
+            <ul>     
+                <li>
+                    <label for="steam"><input type="checkbox" id="steam" name="platform[]" value="steam">
+                    <img src="/images/Steam.png" alt="Steam">Steam</label>
+                </li>
+                <li>
+                    <label for="xbox"><input type="checkbox" id="xbox" name="platform[]" value="xbox">
+                    <img src="/images/xbox.png" alt="Xbox">Xbox</label>
+                </li>
+                <li>
+                    <label for="sony"><input type="checkbox" id="sony" name="platform[]" value="sony">
+                    <img src="/images/sony.jpg" alt="Sony">Sony</label>
+                </li>
+                <li>
+                    <label for="epic"><input type="checkbox" id="epic" name="platform[]" value="epic">
+                    <img src="/images/epicGames.png" alt="Epic">Epic</label>
+                </li>
+                <li>
+                    <label for="nintendo"><input type="checkbox" id="nintendo" name="platform[]" value="nintendo">
+                    <img src="/images/nintendo.png" alt="Nintendo">Nintendo</label>
+                </li>
+            </ul>    
+        </div>
+        <button type="submit">Submit</button>
+    </form>
     </main>
-<script src="/js/deals.js" defer></script>
+    <script src="/js/deals.js" defer></script>
 </body>
 </html>
