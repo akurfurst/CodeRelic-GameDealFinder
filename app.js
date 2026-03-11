@@ -1,4 +1,10 @@
 import express from 'express';
+import mysql2 from 'mysql2';
+import dotenv from 'dotenv';
+
+//load environment variables from .env
+dotenv.config();
+console.log(process.env.DB_HOST);
 
 const app = express();
 const PORT = 3010;
@@ -6,6 +12,17 @@ app.set('view engine', 'ejs');
 app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }));
 //Test data to display on main page
+
+//Create a pool (bucket) of database connections
+const pool = mysql2.createPool({
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_NAME,
+    port: process.env.DB_PORT
+}).promise();
+
+
 const deals = [
     {
         title: "test1",
@@ -43,6 +60,15 @@ const deals = [
         date: 14
     }
 ];
+//database test route
+app.get('/db-test', async(req, res) => {
+    try{
+        const deals = await pool.query('SELECT * FROM deals');
+        res.send(deals[0]);
+    } catch(err) {
+        console.error("Database error: ", err);
+    }
+});
 
 //routing for home page, sends deals array to be displayed in deal cards
 app.get('/', (req, res) => {
