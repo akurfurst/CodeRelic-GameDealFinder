@@ -86,8 +86,10 @@ app.get('/submit-deal', (req, res) => {
 });
 
 //routing to admin page
-app.get('/admin', (req, res) => {
-    res.render('admin', {deals});
+app.get('/admin', async(req, res) => {
+    const deals = await pool.query('SELECT * FROM deals');
+    console.log(deals[0]);
+    res.render('admin', {deals:deals[0]});
 });
 
 //routing to form confirmation page and collect user data from from
