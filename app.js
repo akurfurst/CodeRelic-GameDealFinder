@@ -71,8 +71,43 @@ app.get('/db-test', async(req, res) => {
 });
 
 //routing for home page, sends deals array to be displayed in deal cards
-app.get('/', (req, res) => {
-    res.render('home', {deals});
+app.get('/', async(req, res) => {
+    try {
+        let sql = 'SELECT * FROM deals WHERE 1=1';
+        let values = [];
+
+        let platforms = req.query.platform;
+        let prices = req.query.price
+        if(platforms && !Array.isArray(platforms)) {
+            platforms = [platforms];
+        }
+        if(prices && !Array.isArray(prices)) {
+            prices = [prices];
+
+        }
+        if (platforms && platforms.length > 0){
+            const placeholders = platforms.map(() => '?').join(',');
+            sql += `AND platform IN (${placeholders})`;
+            values.push(...platforms);
+        }
+        
+
+        if (prices && prices.length > 0) {
+            const priceConditions = prices.map(()=> 'price <= ?').join('OR');
+            sql += ` AND (${priceConditions})`;
+
+        values.push(...prices);
+        }
+       
+        const [deals] = await pool.query(sql, values);
+
+        res.render('home', {deals});
+    } catch (err) {
+        console.error('Error loading filtered deals:', err);
+        res.status(500).send('Server error');
+
+    }
+    
 });
 
 //routing for about-us

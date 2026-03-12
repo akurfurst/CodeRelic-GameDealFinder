@@ -31,38 +31,42 @@
         </div>
     </nav>-->
     <div id="filter">
-        <fieldset id="platform" class="filters">
+        <form id = "filters" action = "/" method = "GET">
+        <fieldset id="platform" class="filters" >
             <legend>Filter</legend>
             <h2>Platform</h2>
             <label for="steam">
-                <input type="checkbox" id="steam" name="platform[]" value="steam">Steam
+                <input type="checkbox" id="steam" name="platform" value="steam">Steam
             </label>
             <label for="xbox">
-                <input type="checkbox" id="xbox" name="platform[]" value="xbox">Xbox
+                <input type="checkbox" id="xbox" name="platform" value="xbox">Xbox
             </label>
             <label for="playstation">
-                <input type="checkbox" id="playstation" name="platform[]" value="playstation">Playstation
+                <input type="checkbox" id="playstation" name="platform" value="playstation">Playstation
             </label>
             <label for="epic">
-                <input type="checkbox" id="epic" name="platform[]" value="epic">Epic
+                <input type="checkbox" id="epic" name="platform" value="epic">Epic
             </label>
             <label for="nintendo">
-                <input type="checkbox" id="nintendo" name="platform[]" value="nintendo">Nintendo
+                <input type="checkbox" id="nintendo" name="platform" value="nintendo">Nintendo
             </label>
             <h2>Price</h2>
             <label for="under20">
-                <input type="checkbox" id="under20" name="price[]" value="under20">Under $20
+                <input type="checkbox" id="under20" name="price" value="20">Under $20
             </label>
             <label for="under15">
-                <input type="checkbox" id="under15" name="price[]" value="under15">Under $15
+                <input type="checkbox" id="under15" name="price" value="15">Under $15
             </label>
             <label for="under10">
-                <input type="checkbox" id="under10" name="price[]" value="under10">Under $10
+                <input type="checkbox" id="under10" name="price" value="10">Under $10
             </label>
             <label for="under5">
-                <input type="checkbox" id="under5" name="price[]" value="under5">Under $5
+                <input type="checkbox" id="under5" name="price" value="5">Under $5
             </label>
+            <button type="submit">apply</button>
         </fieldset>
+        
+    </form>
     </div>
     <div id="main">
         <% deals.forEach(deal=> { %>

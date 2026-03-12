@@ -41,6 +41,11 @@ nav {
     display: flex;
 }
 
+button{
+    background-color: #D84040;
+    color: #EEEEEE;
+}
+
 .nav a {
     display: flex;
     width: 100%;

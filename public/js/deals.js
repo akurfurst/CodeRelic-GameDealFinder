@@ -14,6 +14,10 @@ document.getElementById("deal-form").onsubmit = () => {
     if (!price) {
         document.getElementById("err-price").style.display = "block";
         isValid = false;
+    } else if (price < 1){
+        document.getElementById("err-price-negative").style.display = "block";
+        isValid = false;
+
     }
 
     // Validate deal URL
