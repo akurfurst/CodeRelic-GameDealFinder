@@ -86,8 +86,8 @@ app.get('/', async(req, res) => {
 
         }
         if (platforms && platforms.length > 0){
-            const placeholders = platforms.map(() => '?').join(',');
-            sql += `AND platform IN (${placeholders})`;
+            const placeholders = platforms.map(() => '?').join(', ');
+            sql += ` AND platform IN (${placeholders})`;
             values.push(...platforms);
         }
         
@@ -98,7 +98,8 @@ app.get('/', async(req, res) => {
 
         values.push(...prices);
         }
-       
+       console.log(sql);
+        console.log(values);
         const [deals] = await pool.query(sql, values);
 
         res.render('home', {deals});
