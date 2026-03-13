@@ -67,10 +67,39 @@ nav {
     padding: .5rem;
     border-radius: 1rem;
     border: none;
+    max-width: 700px;
+    line-height: 2;
 }
 
 #about-us-content a:hover{
     transition: .25s;
     border: 1px solid #EEEEEE;
     background-color: #D84040;
+}
+
+#about-us-content {
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 40px;
+    background-color: #6b1111;
+    border-radius: 8px;
+    border: 1px solid #EEEEEE;
+    line-height: 1.8;
+}
+
+#about-us-content h1 {
+    font-size: 2rem;
+    margin-bottom: 16px;
+}
+
+#about-us-content h2 {
+    font-size: 1.2rem;
+    margin-top: 24px;
+    margin-bottom: 8px;
+    color: #ffcccc;
+}
+
+#about-us-content p {
+    color: #EEEEEE;
+    margin-bottom: 12px;
 }
