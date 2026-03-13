@@ -70,13 +70,13 @@
     </div>
     <div id="main">
         <% deals.forEach(deal=> { %>
-            <div class="deal-card">
+            <a class="deal-card" href="<%= deal.url %>" target="_blank">
                 <h3><%= deal.title %></h3>
                 <p>price: </p><p>$<%= deal.price %></p>
                 <p>Discount: </p><p>-<%= deal.discount %>%</p>
                 <p>Platform: </p><p><%= deal.platform %></p>
-                <p>Duration: </p><p><%= deals.duration %> days</p>
-            </div>
+                <p>Duration: </p><p><%= deal.duration %> days</p>
+            </a>
         <% }) %>
     </div>
 </body>
