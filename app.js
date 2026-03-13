@@ -98,8 +98,8 @@ app.get('/', async(req, res) => {
 
         values.push(...prices);
         }
-       console.log(sql);
-        console.log(values);
+        //console.log(sql);
+        //console.log(values);
         const [deals] = await pool.query(sql, values);
 
         res.render('home', {deals});
@@ -124,7 +124,7 @@ app.get('/submit-deal', (req, res) => {
 //routing to admin page
 app.get('/admin', async(req, res) => {
     const deals = await pool.query('SELECT * FROM deals');
-    console.log(deals[0]);
+    //console.log(deals[0]);
     res.render('admin', {deals:deals[0]});
 });
 
@@ -157,7 +157,7 @@ app.post('/deal-confirm', async(req, res) =>{
     //insert user data into database
     const sql = 'insert into deals (title, price, original_price, url, code, date, platform) values (?, ?, ?, ?, ?, ?, ?)';
     const result = await pool.execute(sql, params);
-    
+
 
     res.render('confirmation', {deal});
 });
