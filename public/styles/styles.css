@@ -19,6 +19,7 @@ body {
 
 header {
     background-color: #8E1616;
+    color: white;
     grid-area: title;
     display: flex;
     justify-content: space-between;
@@ -66,7 +67,7 @@ button{
     color: #EEEEEE;
 
    input {
-    background-color: #1D1616;
+    background-color: white;
    }
 
 }
