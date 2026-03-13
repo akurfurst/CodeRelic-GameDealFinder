@@ -129,18 +129,30 @@ app.get('/admin', async(req, res) => {
 });
 
 //routing to form confirmation page and collect user data from from
-app.post('/deal-confirm', (req, res) =>{
+app.post('/deal-confirm', async(req, res) =>{
     //grab user information and add to array
-    const deal = {
-        title: req.body['game-title'],
-        price: req.body.price,
-        free: req.body.free ? 'Yes' : 'No',
-        url: req.body['deal-url'],
-        date: req.body['expiry-date'],
-        platform: req.body.platform,
-        timestamp: new Date()
-    };
-    deals.push(deal);
+    const deal = req.body;
+    const params = [
+        deal.title,
+        deal.price,
+        deal.original_price,
+        deal.deal_url,
+        deal.promo_code,
+        deal.expiry_date,
+        Array.isArray(deal.platform) ? deal.platform.join(", ") : "none"
+    ];
+    console.log(deal);
+    console.log(params);
+    // const deal = {
+    //     title: req.body['game-title'],
+    //     price: req.body.price,
+    //     free: req.body.free ? 'Yes' : 'No',
+    //     url: req.body['deal-url'],
+    //     date: req.body['expiry-date'],
+    //     platform: req.body.platform,
+    //     timestamp: new Date()
+    // };
+    // deals.push(deal);
     res.render('confirmation', {deal});
 });
 
