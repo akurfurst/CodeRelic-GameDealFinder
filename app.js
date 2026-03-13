@@ -153,6 +153,12 @@ app.post('/deal-confirm', async(req, res) =>{
     //     timestamp: new Date()
     // };
     // deals.push(deal);
+
+    //insert user data into database
+    const sql = 'insert into deals (title, price, original_price, url, code, date, platform) values (?, ?, ?, ?, ?, ?, ?)';
+    const result = await pool.execute(sql, params);
+    
+
     res.render('confirmation', {deal});
 });
 
