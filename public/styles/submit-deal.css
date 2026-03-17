@@ -27,7 +27,7 @@ body {
     display: flex;
     flex-direction: column;
     margin-top: 5px;
-    border-radius: 5px;
+    border-radius: 25px;
 }
 
 .field {
@@ -36,13 +36,14 @@ body {
     border: none;
     margin-top: 10px;
     padding-bottom: 12px;
-    border-radius: 5px;
 }
 
     .field input, 
     .field textarea {
       background-color: #ffffff;
       width: 100%;
+      border-radius: 10px;
+      padding: 10px 16px;
     }
 
  textarea {
@@ -67,10 +68,12 @@ body {
     border: none;
     margin-top: 10px;
     padding-bottom: 12px;
-    border-radius: 5px;
+    border-radius: 25px;
 
     input {
       background-color: #ffffff;
+      padding: 10px 16px;
+      border-radius: 10px;
     }
 
     
@@ -151,11 +154,33 @@ label img {
 
 ul {
     display: flex;
-    gap: 12px;
+    gap: 42px;
     flex-wrap: wrap;
     align-content: center;
     list-style: none;
+}
 
+ul li label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: #fff;
+  color: #8E1616;
+  user-select: none;
+}
+ul li input[type="checkbox"] {
+  display: none;
+}
+
+ul li input[type="checkbox"]:checked + img ~ * ,
+ul li:has(input:checked) label,
+ul li label:has(input:checked) {
+  border-color: black;
+  background-color: lightgray;
 }
 
 button {
