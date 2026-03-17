@@ -22,44 +22,6 @@ const pool = mysql2.createPool({
     port: process.env.DB_PORT
 }).promise();
 
-
-const deals = [
-    {
-        title: "test1",
-        price: 20,
-        free: false,
-        platform: "Steam",
-        date: 7
-    },
-    {
-        title: "test2",
-        price: 15,
-        free: false,
-        platform: "xbox",
-        date: 14
-    },
-    {
-        title: "test3",
-        price: 15,
-        free: false,
-        platform: "xbox",
-        date: 14
-    },
-    {
-        title: "test4",
-        price: 15,
-        free: false,
-        platform: "xbox",
-        date: 14
-    },
-    {
-        title: "test5",
-        price: 15,
-        free: false,
-        platform: "xbox",
-        date: 14
-    }
-];
 //database test route
 app.get('/db-test', async(req, res) => {
     try{
