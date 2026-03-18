@@ -26,6 +26,7 @@ header {
     align-items: center;
     border: #EEEEEE 1px solid;
     border-radius: 5px;
+    padding-left: 1rem;
 }
 
 nav {

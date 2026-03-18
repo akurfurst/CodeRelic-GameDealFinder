@@ -17,6 +17,7 @@ header {
     border: #EEEEEE 1px solid;
     border-radius: 5px;
     height: 10%;
+    padding-left: 1rem;
 }
 
 nav {
