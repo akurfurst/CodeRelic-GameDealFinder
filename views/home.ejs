@@ -72,10 +72,11 @@
         <% deals.forEach(deal=> { %>
             <a class="deal-card" href="<%= deal.url %>" target="_blank">
                 <h3><%= deal.title %></h3>
-                <p>price: </p><p>$<%= deal.price %></p>
-                <p>Discount: </p><p>-<%= deal.discount %>%</p>
+                <p>Sell Price: </p><p>$<%= deal.price %></p>
+                <P>Orignal Price:</P><p>$<%= deal.original_price %></p>
+                <p>Discount: </p><p><%= Math.round((1 - deal.price / deal.original_price) * 100) %>%</p>
                 <p>Platform: </p><p><%= deal.platform %></p>
-                <p>Duration: </p><p><%= deal.duration %> days</p>
+               <p>Deal Ends: </p><p><%= new Date(deal.date).toLocaleDateString('en-US', { timeZone: 'UTC', month: 'long', day: 'numeric', year: 'numeric' }) %></p>
             </a>
         <% }) %>
     </div>
