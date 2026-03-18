@@ -74,7 +74,7 @@
                 <h3><%= deal.title %></h3>
                 <p>Sell Price: </p><p>$<%= deal.price %></p>
                 <P>Orignal Price:</P><p>$<%= deal.original_price %></p>
-                <p>Discount: </p><p><%= Math.round((1 - deal.price / deal.original_price) * 100) %>%</p>
+                <p>Discount: </p><p>-<%= Math.round((1 - deal.price / deal.original_price) * 100) %>%</p>
                 <p>Platform: </p><p><%= deal.platform %></p>
                <p>Deal Ends: </p><p><%= new Date(deal.date).toLocaleDateString('en-US', { timeZone: 'UTC', month: 'long', day: 'numeric', year: 'numeric' }) %></p>
             </a>
