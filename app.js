@@ -95,7 +95,8 @@ app.get('/admin', async(req, res) => {
 app.post('/deal-confirm', async(req, res) =>{
     //grab user information and add to array
     const deal = req.body;
-
+    deal.platform = Array.isArray(deal.platform) ? deal.platform : deal.platform ? [deal.platform] : [];
+    
     //server side validation
     const valid = validateForm(deal);
     if (!valid.isValid) {
@@ -110,7 +111,7 @@ app.post('/deal-confirm', async(req, res) =>{
         deal.original_price,
         deal.deal_url,
         deal.promo_code,
-        deal.expiry_date,
+        deal.expiry_date || null,
         Array.isArray(deal.platform) ? deal.platform.join(", ") : "none"
     ];
     console.log(deal);

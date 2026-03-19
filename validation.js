@@ -22,13 +22,13 @@ export function validateForm(data){
     if(data.price.trim() == "") errors.push("Price is required");
     
     //if price is negative
-    if(data.price >= 0) errors.push("Price cannot be negative");
+    if(parseFloat(data.price) < 0) errors.push("Price cannot be negative");
 
     //if no original price
     if(data.original_price == "") errors.push("Original Price is required");
 
     //if original price is smaller than price
-    if(data.original_price > data.price) errors.push("Original price must be more than discounted price");
+    if(parseFloat(data.original_price) <= parseFloat(data.price)) errors.push("Original price must be more than discounted price");
 
     //check if valid html link
     if(!data.deal_url.startsWith("https://")) errors.push("Invlaid link");
@@ -41,8 +41,7 @@ export function validateForm(data){
 
     //make sure platform is valid
     const platforms = ["steam", "xbox", "sony", "epic", "nintendo"];
-    if(!platforms.includes(data.platform)) errors.push("Invalid platform");
- 
+    if(!data.platform || data.platform.length === 0) errors.push("At least one platform is required");
     return{
         isValid: errors.length === 0,
         errors

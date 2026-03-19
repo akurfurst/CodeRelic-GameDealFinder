@@ -3,7 +3,7 @@ document.getElementById("deal-form").onsubmit = () => {
     let isValid = true;
 
     // Validate game title
-    let gameTitle = document.getElementById("game-title").value.trim();
+    let gameTitle = document.getElementById("title").value.trim();
     if(!gameTitle) {
         document.getElementById("err-game-title").style.display = "block";
         isValid = false;
@@ -20,15 +20,29 @@ document.getElementById("deal-form").onsubmit = () => {
 
     }
 
+    // Validate original price
+    let originalPrice = document.getElementById("original_price").value.trim();
+    let originalPriceNum = parseFloat(originalPrice);
+    if (!originalPrice) {
+        document.getElementById("err-original-price").style.display = "block";
+        isValid = false;
+    } else if (isNaN(originalPriceNum) || originalPriceNum <= 0) {
+        document.getElementById("err-original-price-invalid").style.display = "block";
+        isValid = false;
+    } else if (originalPriceNum <= parseFloat(price)) {
+        document.getElementById("err-original-price-low").style.display = "block";
+        isValid = false;
+    }
+
     // Validate deal URL
-    let url = document.getElementById("deal-url").value.trim();
+    let url = document.getElementById("deal_url").value.trim();
     if (!url) {
         document.getElementById("err-url").style.display = "block";
         isValid = false;
     }
 
     // Validate expiry date
-    let expiryDate = document.getElementById("expiry-date").value;
+    let expiryDate = document.getElementById("expiry_date").value;
     if (!expiryDate) {
         document.getElementById("err-expiry-date").style.display = "block";
         isValid = false;
