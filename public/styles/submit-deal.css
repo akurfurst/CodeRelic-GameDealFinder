@@ -200,3 +200,8 @@ button {
 .platform-container {
     margin-top: 16px;
 }
+
+.form-error{
+    text-align: center;
+    color: red;
+}

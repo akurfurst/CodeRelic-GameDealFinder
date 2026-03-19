@@ -1,6 +1,7 @@
 import express from 'express';
 import mysql2 from 'mysql2';
 import dotenv from 'dotenv';
+import {validateForm} from './validation.js';
 
 //load environment variables from .env
 dotenv.config();
@@ -94,6 +95,15 @@ app.get('/admin', async(req, res) => {
 app.post('/deal-confirm', async(req, res) =>{
     //grab user information and add to array
     const deal = req.body;
+
+    //server side validation
+    const valid = validateForm(deal);
+    if (!valid.isValid) {
+        console.log(valid);
+        res.render('submit-deal', {errors: valid.errors});
+        return;
+    }
+
     const params = [
         deal.title,
         deal.price,

@@ -11,6 +11,11 @@
     <%- include('../views/navbar')%>
     <main>
     <form id="deal-form" class ="deal-form" action="/deal-confirm" method="post">
+        <% if (typeof errors != 'undefined') { %>
+            <% errors.forEach(error => { %>
+                <p class="form-error">*<%= error %></p>
+            <% }); %>
+        <% } %>
         <h1>Add a Deal!</h1> 
         <div class = "field">
             <label for="title">Game Title</label>
