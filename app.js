@@ -41,6 +41,12 @@ app.get('/', async(req, res) => {
 
         let platforms = req.query.platform;
         let prices = req.query.price
+        let search = req.query.search;
+        
+        if(search && search.trim() !== "") {
+            sql += ` AND title LIKE ?`;
+            values.push(`%${search.trim()}%`);
+        }
         if(platforms && !Array.isArray(platforms)) {
             platforms = [platforms];
         }
